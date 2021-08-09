@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <button src="css_selector.html">back</button>
+    <style>
+        #square {
+            height: 100px;
+            width: 100px;
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Square CSS</h2>
+    <div id="square"></div>
+    <br>
+    <button onclick=colorChange()> Change color</button>
+    <script>
+
+        function colorChange(){
+          document.querySelector("#square").style.backgroundColor="red";
+        }
+       
+        
+    </script>
+
+</body>
+
+</html>

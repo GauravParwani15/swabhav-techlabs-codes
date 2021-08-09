@@ -1,0 +1,60 @@
+<html>
+<head>
+    <style>
+        .odd{
+            background-color: yellow;
+        }
+        .even{
+            background-color: aqua;
+        }
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        }
+
+        .instructions {
+            padding: 20px;
+        }
+        .button {
+            padding-left: 150px;
+            padding-top: 30px;
+        }
+    </style>
+    <h1 class="instructions">FactFinder:</h1>
+</head>
+
+<body>
+
+    <div class="instructions">
+        <h4>Enter a Number to find some intresting Facts about it:</h4>
+
+        <label>Enter a Number: </label>
+        <input id="input" required>
+        <br>
+        <div class="button" id="button">
+            <button>Get Facts:</button>
+        </div>
+        <p id="fact-value"> </p>
+        <table id="table">
+            <tr>
+                <h2>History</h2>
+            </tr>
+            <tr>
+                <th>Number</th>
+                <th>Fact</th>
+                <th>Search time</th>
+                <!-- <th></th> -->
+            </tr>
+    </div>
+</body>
+<script type="module" src="numberAPI_v2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"> </script>
+</script>
+</html>

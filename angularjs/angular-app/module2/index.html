@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+</head>
+
+<body ng-app="modA">
+
+    <section ng-controller="ControllerA">
+        <h1>{{ message }}</h1>
+    </section>
+    <section ng-controller="ControllerB">
+        <h1>{{ message }}</h1>
+        <h1>{{ developer|json }}</h1>
+    </section>
+
+</body>
+<script src="../angular.js"></script>
+<script src="module1.js"></script>
+<script src="module2.js"></script>
+
+
+</html>

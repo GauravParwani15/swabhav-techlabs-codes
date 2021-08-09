@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+
+    <body ng-app="main" ng-controller='MainController'>
+    <section>
+        <h1>Oneway binding</h1>  
+        <p>{{student.roll}}</p>
+        <p>{{student.name}}</p>
+        <p>{{student.cgpa}}</p>
+    </section>
+    <hr>
+    <section>
+        <h1>Twoway Binding</h1>
+        <input type="text" ng-model='student.roll'>
+        <input type="text" ng-model='student.name'>
+        <input type="text" ng-model='student.cgpa'>
+        <p>{{ ::student.roll}}</p>
+        <p>{{ ::student.name}}</p>
+        <p>{{student.cgpa}}</p>
+
+    </section>
+
+    </body>
+    <script src="../angular.js"></script>
+    <script src="main.js"></script>
+</html>

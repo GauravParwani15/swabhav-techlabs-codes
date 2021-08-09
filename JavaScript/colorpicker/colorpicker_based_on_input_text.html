@@ -1,0 +1,22 @@
+<HTML>
+
+<HEAD>
+    <h1>
+
+    </h1>
+</HEAD>
+
+<Body>
+   change background:
+    <input type="text" placeholder="enter colour"  id="input">
+    <br><br><button onclick=windowColorChange()>change window colour</button>
+    
+    <script>
+        function windowColorChange(){
+            var colour = document.getElementById("input").value;
+        document.body.style.backgroundColor = colour;
+        }
+    </script>
+</Body>
+
+</HTML>

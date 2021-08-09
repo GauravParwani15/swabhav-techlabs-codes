@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+</head>
+
+<body ng-app="acme">
+
+    <ul class="topnav">
+        <li><a class="active" href="">Acme Product Management</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#productlist">Product List</a></li>
+    </ul>
+
+    <div style="padding:0 16px;">
+    <div style="padding:5%;">
+    <section ng-view>
+
+    </section>
+    </div>
+
+    </div>
+
+</body>
+
+</html>

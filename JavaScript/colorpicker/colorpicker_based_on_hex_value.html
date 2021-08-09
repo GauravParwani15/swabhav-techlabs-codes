@@ -1,0 +1,29 @@
+<HTML>
+
+<HEAD>
+    <h1>
+
+    </h1>
+</HEAD>
+
+<Body>
+ <label for="cars">Change Background colour:</label>
+<select name="cars" id="cars" >
+    <option value="white">-- select --</option>
+    <option value="#800000">#800000</option>
+    <option value="#808000">#808000</option>
+    <option value="#00FFFF">#00FFFF</option>
+    <option value="#FA8072">#FA8072</option>
+</select>
+<br><br><button onclick=windowColorChange()>change window colour</button>
+
+<script>
+    function windowColorChange() {
+        var colour = document.getElementById("cars").selectedOptions[0].value;;
+        document.body.style.backgroundColor = colour;
+        console.log(colour);
+    }
+</script>
+</Body>
+
+</HTML>

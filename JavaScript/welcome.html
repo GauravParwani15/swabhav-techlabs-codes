@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <h1>this is Welcome page</h1>
+    </head>
+    <body>
+
+                    <script>
+                        console.log(typeof (window));
+                        typeof (this);
+                        this == window;
+                        var foo;
+                        console.log(typeof (foo));
+                        foo = 10;
+                        console.log(typeof (foo));
+                        foo = 1222435465767;
+                        console.log(typeof (foo));
+                        foo = "Gaurav";
+                        console.log(typeof (foo));
+                        console.log(foo);
+                        foo = true;
+                        console.log(typeof (foo));
+                        foo = {};
+                        console.log(typeof (foo));
+                        foo.company = "Swabhav Techlabs";
+                        console.log(typeof (foo));
+                        console.log(foo);
+
+                        foo = function () {
+                            console.log(this == window);
+                            console.log("inside function");
+                        }
+
+                        console.log(typeof (foo));
+                        foo();
+
+                    </script>
+    </body>
+</html>

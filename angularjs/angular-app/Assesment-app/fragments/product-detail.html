@@ -1,0 +1,36 @@
+<setion>
+
+
+    <style>
+        .card-header {
+            background-color: rgb(38, 136, 192);
+            padding: 1%
+        }
+    </style>
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-header" style="color: aliceblue;">Product Detail: </h2>
+
+        </div>
+        <div class="card-title">
+            <div class="container-fluid">
+            <table class="table col-md-6" >
+               <tr> <th>Name: </th>  <th>{{product.productName}} </th></tr>
+                <tr> <th>Code: </th> <th>{{product.productCode}} </th></tr>
+                <tr><th> Description:</th> <th>{{product.description}} </th>
+                <tr><th>Availability: </th>  <th>  {{product.releaseDate}}  </th> </tr>
+                <tr><th>Price: </th> <th> {{product.price }}   </th></tr>
+                <tr> <th>5 Star Rating: </th> <th><div star-rating rating-value=" product.starRating " max="5"> </div> </th></tr>
+            </table>
+            <div class="col-md-6">
+                <img ng-src="{{ product.imageUrl }}" >
+            </div>
+            <br>
+            <a href="#productlist"><button class="btn btn-secondary"> Back</button></a>
+
+            
+        </div>
+        </div>
+        </div>
+</setion>
+

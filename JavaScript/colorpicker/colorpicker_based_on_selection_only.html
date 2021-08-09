@@ -1,0 +1,30 @@
+<HTML>
+
+<HEAD>
+    <h1>
+
+    </h1>
+</HEAD>
+
+<Body>
+
+    <!-- <input type="text" placeholder="enter colour" id="input"> -->
+    <label for="cars">Change Background colour:</label>
+    <select name="cars" id="cars" onChange=windowColorChange(this.value)>
+        <option value="white">-- select --</option>
+        <option value="maroon">maroon</option>
+        <option value="olive">olive</option>
+        <option value="navy">navy</option>
+        <option value="fuchsia">fuchsia</option>
+    </select>
+
+    <script>
+        function windowColorChange(colour) {
+             colour = document.getElementById("cars").selectedOptions[0].value;;
+            document.body.style.backgroundColor = colour;
+            console.log(colour);
+        }
+    </script>
+</Body>
+
+</HTML>

@@ -1,0 +1,46 @@
+<html>
+   <head>
+       <style>
+            .button {  background-color: grey;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 60px;
+            margin: 4px 2px;}
+
+            .instructions{
+                padding: 20px;
+            }
+       </style>
+   </head>
+    <body>
+      <div class="instructions">
+        <h1>Button Guesser</h1>
+        <div>
+            <h3 id='instructions' >
+                <br>
+               <p> Instructions: </p>
+            <p> 1) You have to guess and find the hidden blue button </p>
+              <p> 1) You have to guess and find the hidden blue button </p>
+            <p>  2) Button you click will reveal color </p>
+            <p>  3) Red indicate button is located at bigger number </p>
+            <p>  4)Blue indicate button is located at lesser number </p>
+            </h3>
+        </div>
+        <input type="range" min="4" max="100" value="30" class="slider" id="sliderRange">
+        <p>Value: <span id="sliderVal"></span></p>
+        <p id='buttonPanel'></p>
+        <p>Total retries: </p>
+        <p id="totalRetries"></p>
+        <p>Retries left: </p>
+        <p id="retriesLeft"></p>
+    </div>
+
+    </html>
+        <script src='script.js'></script>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+<html>
+    
+    <head>
+
+    </head>
+    <style>
+        .body{
+            background-color: aliceblue;
+        }
+    </style>
+
+    <body class="body" ng-app="myApp" ng-controller="validateCtrl">
+
+            <div style="padding:5%;">
+                <div class="card">
+                    <div class="card-body" style="background-color: beige">
+                        <h2 class="card-title">Form Validation</h2>
+            
+                        <form  name="myForm" novalidate>
+            
+            
+                            <p>Name:<br>
+                                <input type="text" name="name" ng-model="user.name" required>
+                                <span style="color:red" ng-show="myForm.name.$dirty && myForm.name.$invalid">
+                                    <span ng-show="myForm.name.$error.required || myForm.name.$touched">Name is required.</span>
+                                </span>
+                            </p>
+            
+                            <p>Age:<br>
+                                <input type="number" name="age" ng-model="user.age" class="" required>
+                                <span style="color:red" ng-show="myForm.age.$dirty && myForm.age.$invalid">
+                                    <span ng-show="myForm.age.$error.required || myForm.age.$touched">Age is required.</span>
+                                </span>
+                            </p>
+            
+
+                            <p>Roll no:<br>
+                                <input type="number" name="roll" ng-model="user.roll" class="" required>
+                                <span style="color:red" ng-show="myForm.roll.$dirty && myForm.roll.$invalid">
+                                    <span ng-show="myForm.roll.$error.required || myForm.roll.$touched">Roll no. is required.</span>
+                                </span>
+                            </p>
+
+                            <label for="Gender">Gender:</label>
+                            
+                            <select name="Gender" ng-model="user.Gender" id="Gender" required>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+
+                            
+                            </p>
+            
+                            <p>Email:<br>
+                                <input type="email" name="email" ng-model="user.email" required>
+                                <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid ">
+                                    <span ng-show="myForm.email.$error.required ">Email is required.</span>
+                                    <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                                </span>
+                            </p>
+
+                            <p>Date:<br>
+                            <div class="">
+                            <input type="date" id="date" name="date" ng-model="user.date" class="form-control datepicker" required>
+                            <span style="color:red" ng-show="myForm.date.$dirty && myForm.date.$invalid ">
+                                <span ng-show="myForm.date.$error.required ">Date is required.</span>
+                            </span>
+                            </div>
+                            </p>
+
+                            <p>
+                                <!-- <Button class="btn btn-warning card-link"
+                                    ng-disabled="  myForm.name.$invalid || myForm.age.$invalid || myForm.roll.$invalid || myForm.Gender.$invalid || myForm.date.$invalid || myForm.email.$invalid "
+                                    ng-click="setDetails()">Submit</Button> -->
+                                
+                                <Button class="btn btn-warning card-link"
+                                     ng-disabled="  myForm.name.$invalid || myForm.age.$invalid || myForm.roll.$invalid || myForm.Gender.$invalid || myForm.date.$invalid || myForm.email.$invalid "
+                                    ng-click="setDetails()">Submit</Button>
+
+                                <!-- <input type="submit" class="btn btn-warning card-link" ng-click="setDetails()"> -->
+                            </p>
+            
+                        </form>
+                    </div>
+                </div>
+
+                <div style="padding-top:40px">
+                    <div  >
+                        <div class="">
+                            <button class="btn btn-primary" ng-click="checkHandler()">Get Details</button>
+                        </div>
+
+                    </div>
+                </div>
+                <br><br>
+
+
+
+
+                <!-- table -->
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Roll No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">isMale</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="student in students">
+                            <th scope="row">{{ student.id }}</th>
+                            <td scope="col">{{ student.rollNo }}</td>
+                            <td scope="col">{{ student.name }}</td>
+                            <td scope="col">{{ student.age }}</td>
+                            <td scope="col">{{ student.email }}</td>
+                            <td scope="col">{{ student.date }}</td>
+                            <td scope="col" >{{ student.isMale }}</td>
+                            <td scope="col"><button class="btn btn-secondary"  ng-click="putDetailsInForm(student)">Select</button></td>
+                            <td scope="col"><button class="btn btn-danger" ng-init="id = student" ng-click="deleteStudent(student.id)">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+    </body>
+
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                    crossorigin="anonymous"></script>
+                <script src="../angular.js"></script>
+                <script src="script.js"></script>
+</html>
